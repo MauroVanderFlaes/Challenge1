@@ -5,7 +5,13 @@ import Book from './components/Book.js';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Book title="Book 1" />
+      <Text>Bookshop</Text>
+      <Image
+            style={styles.tileImage}
+            source={require('../assets/shoppingcart.jpg')}
+          />
+      <Book Title="Book 1" Author="by Some Random dude" Description="Lorem tekstje" Isbn="ISBN 978-8-2165-1860-1"/>
+      <Text>Ghelloo</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,9 +19,5 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
