@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, } from 'react-native';
 import Book from './components/Book.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.header1}>Bookshop</Text>
+       <Text style={styles.header1}>Bookshop</Text>
+        <Image style={styles.cart} source={require('./assets/shoppingcart.jpg')}></Image>
       <View>
         <Book Title="Book 1" Author="by Some Random dude" Description="Lorem tekstje: " Isbn="ISBN 978-8-2165-1860-1"/>
         <Book Title="Book 2" Author="by Some other dude" Description="Lorem tekstje: " Isbn="ISBN 978-2-1425-4277-8"/>
@@ -27,6 +28,13 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '800',
     margin: 12,
+  },
+
+  cart: {
+    width: 40,
+    maxHeight: 40,
+    marginLeft: 340,
+    marginTop: -50,
   },
 
 });
